@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GTA VI: Guia Definitivo — códigos, truques, segredos e guia ilustrado.">
+  <title>GTA VI: Guia Definitivo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080914;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    :root {
+      --pink: #ff35a8;
+      --purple: #9d4dff;
+      --cyan: #00eaff;
+      --dark: #101225;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #282442;
+      background: rgba(8, 9, 20, .95);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--pink);
+    }
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 25%, #54206d 0%, transparent 48%),
+        linear-gradient(135deg, #11132c, #080914 65%);
+      padding: 80px 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 7px 16px;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 1.08;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 22px;
+      text-shadow: 0 0 25px rgba(255, 53, 168, .35);
+    }
+
+    h1 span {
+      color: var(--pink);
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 30px;
+      color: #d0d0df;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      color: white;
+      text-decoration: none;
+      padding: 16px 30px;
+      border-radius: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 0 25px rgba(255, 53, 168, .3);
+      transition: .25s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(255, 53, 168, .6);
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .section-title span {
+      color: var(--cyan);
+    }
+
+    .section-intro {
+      text-align: center;
+      color: #b8b8c9;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--dark);
+      border: 1px solid #30264e;
+      border-radius: 14px;
+      padding: 25px;
+      transition: .25s;
+    }
+
+    .card:hover {
+      border-color: var(--pink);
+      transform: translateY(-5px);
+    }
+
+    .card .icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: var(--cyan);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #c4c4d2;
+      font-size: 14px;
+    }
+
+    .offer {
+      background:
+        radial-gradient(circle at center, #30134c, #101225 70%);
+      text-align: center;
+    }
+
+    .offer-box {
+      max-width: 600px;
+      margin: auto;
+      padding: 40px 25px;
+      background: rgba(8, 9, 20, .8);
+      border: 1px solid var(--pink);
+      border-radius: 18px;
+      box-shadow: 0 0 35px rgba(255, 53, 168, .12);
+    }
+
+    .old-price {
+      color: #9292a5;
+      text-decoration: line-through;
+    }
+
+    .price {
+      font-size: 55px;
+      font-weight: 900;
+      color: var(--cyan);
+      margin: 10px 0;
+    }
+
+    .offer-box p {
+      color: #c9c9d7;
+      margin-bottom: 22px;
+    }
+
+    .faq {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    details {
+      background: var(--dark);
+      border: 1px solid #30264e;
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--cyan);
+      font-weight: bold;
+    }
+
+    details p {
+      color: #c4c4d2;
+      padding-top: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      background: #05060d;
+      color: #9292a5;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 550px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .price {
+        font-size: 43px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">GTA VI | GUIA DEFINITIVO</div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="tag">GUIA DIGITAL ILUSTRADO</div>
+
+        <h1>
+          GTA VI:<br>
+          <span>GUIA DEFINITIVO</span>
+        </h1>
+
+        <p>
+          Códigos, truques, segredos e informações
+          organizadas para quem quer explorar o universo
+          de GTA VI com muito mais conhecimento.
+        </p>
+
+        <a class="button" href="#oferta">
+          QUERO MEU GUIA AGORA
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">
+          O QUE VAIS <span>ENCONTRAR?</span>
+        </h2>
+
+        <p class="section-intro">
+          Um material digital ilustrado, organizado
+          para facilitar a tua consulta.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="icon">🎮</div>
+            <h3>Códigos e truques</h3>
+            <p>
+              Consulta uma selecção de códigos e truques
+              apresentados no guia.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🚘</div>
+            <h3>Veículos</h3>
+            <p>
+              Informações sobre veículos e requisitos
+              apresentados no material.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🗺️</div>
+            <h3>Segredos e exploração</h3>
+            <p>
+              Descobre informações e curiosidades
+              organizadas para consulta.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📘</div>
+            <h3>Guia ilustrado</h3>
+            <p>
+              Conteúdo digital em PDF, com organização
+              visual para facilitar a leitura.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Tutoriais</h3>
+            <p>
+              Orientações e informações de consulta
+              sobre o jogo.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🔎</div>
+            <h3>Glossário</h3>
+            <p>
+              Termos e explicações para compreender
+              melhor o conteúdo do guia.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="oferta">
+      <div class="container">
+        <div class="offer-box">
+
+          <div class="tag">ACESSO DIGITAL</div>
+
+          <h2>GARANTE O TEU GUIA!</h2>
+
+          <p>
+            Recebe o teu material digital em PDF
+            e consulta quando quiseres.
+          </p>
+
+          <div class="price">R$ 19,90</div>
+
+          <p>
+            Pagamento e acesso através da plataforma Hotmart.
+          </p>
+
+          <a
+            class="button"
+            href="https://go.hotmart.com/G108665485P"
+            target="_blank"
+            rel="noopener noreferrer">
+            COMPRAR AGORA
+          </a>
+
+          <p style="margin-top:20px;font-size:12px;">
+            Compra sujeita às condições apresentadas
+            na página de pagamento da Hotmart.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">
+          PERGUNTAS <span>FREQUENTES</span>
+        </h2>
+
+        <div class="faq">
+
+          <details>
+            <summary>O guia é físico?</summary>
+            <p>
+              Não. É um produto digital em formato PDF.
+            </p>
+          </details>
+
+          <details>
+            <summary>Como faço a compra?</summary>
+            <p>
+              Clica no botão de compra e segue as instruções
+              apresentadas na página da Hotmart.
+            </p>
+          </details>
+
+          <details>
+            <summary>Como recebo o material?</summary>
+            <p>
+              As instruções de acesso são apresentadas
+              pela Hotmart após a confirmação da compra.
+            </p>
+          </details>
+
+          <details>
+            <summary>O guia é oficial da Rockstar Games?</summary>
+            <p>
+              Não. Este é um material independente,
+              sem afiliação ou aprovação da Rockstar Games
+              ou da Take-Two Interactive.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>GTA VI: Guia Definitivo | Material digital independente.</p>
+    <p>
+      GTA e Grand Theft Auto são marcas dos respectivos
+      titulares. Esta página não representa uma publicação
+      oficial nem possui afiliação com a Rockstar Games
+      ou a Take-Two Interactive.
+    </p>
+    <p style="margin-top:12px;">
+      © 2026 — Todos os direitos reservados ao autor
+      deste material.
+    </p>
+  </footer>
+
+</body>
+</html>
